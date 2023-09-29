@@ -27,20 +27,6 @@ const navItems = {
   },
 };
 
-// function Logo() {
-//   return (
-//     <Link aria-label="Adam Gonzalez" href="/">
-//       <Image
-//         alt="adam"
-//         className="rounded-full"
-//         src={img}
-//         placeholder="blur"
-//         width={70}
-//       />
-//     </Link>
-//   )
-// }
-
 export default function Navbar() {
   type NavItemsKeys = keyof typeof navItems;
   let pathname: NavItemsKeys = "/";
