@@ -3,15 +3,17 @@ import { about, name } from "@/lib/info";
 import glass from "../images/glass1.png";
 
 export const metadata = {
-  description: "Developer, writer, and creator.",
+  description:
+    "Glass Installer, Windows, Showers, Glass Railings, Glass Stair Cases, Insulated Glass Units",
   openGraph: {
-    title: "Adam Gonzalez",
-    description: "Developer, writer, and creator",
-    url: "https://adamgonz.io",
-    siteName: "Adam Gonzalez",
+    title: "Bay City General Glass",
+    description:
+      "Glass Installer, Windows, Showers, Glass Railings, Glass Stair Cases, Insulated Glass Units",
+    url: "https://baycitygeneralglass.net",
+    siteName: "Bay City General Glass",
     images: [
       {
-        url: "https://adamgonz.io/orig.jpeg",
+        url: "https://baycitygeneralglass.net/orig.jpeg",
         width: 1920,
         height: 1080,
       },
