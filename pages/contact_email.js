@@ -4,7 +4,6 @@ export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -12,79 +11,95 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
 
-    const res = await fetch("/api/contact_email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message,
-      }),
-    });
+    try {
+      const res = await fetch("/api/contact_email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
 
-    setLoading(false);
+      const data = await res.json();
+      if (data.error) {
+        throw new Error(data.error);
+      }
 
-    const data = await res.json();
-    if (data.error) {
-      console.log(data.error);
-      return;
+      setSubmitted(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setLoading(false);
     }
-
-    setSubmitted(true);
-    setName("");
-    setEmail("");
-    setMessage("");
   };
 
   return (
-    <div className="max-w-md mx-auto p-8 rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold mb-6">Contact</h1>
+    <div className="min-h-screen flex items-center justify-center ">
+      <div className="max-w-md w-full p-8 rounded-lg shadow-lg bg-white">
+        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
+          Contact Us for Your Glass Needs
+        </h1>
+        <p className="text-sm mb-6 text-center text-gray-600">
+          Reach out to us with details about your project, and we'll provide you
+          with expert advice and a precise estimate tailored to your
+          requirements.
+        </p>
 
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <input
-            className="w-full border p-2"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Name"
-          />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <input
+              className="w-full border p-3 rounded-md"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your Name"
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <input
-            className="w-full border p-2"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-          />
-        </div>
+          <div className="mb-4">
+            <input
+              className="w-full border p-3 rounded-md"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your Email"
+              required
+            />
+          </div>
 
-        <div className="mb-4">
-          <textarea
-            className="w-full border p-2"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="Message"
-          />
-        </div>
+          <div className="mb-6">
+            <textarea
+              className="w-full border p-3 rounded-md"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="How can we assist you?"
+              rows="5"
+              required
+            />
+          </div>
 
-        <button
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          type="submit"
-          disabled={loading}
-        >
-          {loading ? "Sending..." : "Submit"}
-        </button>
-      </form>
+          <button
+            className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 transition duration-300"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Submit"}
+          </button>
+        </form>
 
-      {submitted && (
-        <div className="p-3 bg-green-100 text-green-600 rounded-lg mt-4">
-          Thank you! Your message has been sent.
-        </div>
-      )}
+        {submitted && (
+          <div className="mt-4 p-3 bg-green-100 text-green-600 rounded-lg text-center">
+            Thank you! We'll be in touch shortly.
+          </div>
+        )}
+      </div>
     </div>
   );
 }
