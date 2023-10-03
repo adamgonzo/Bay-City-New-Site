@@ -1,16 +1,16 @@
-import Gallary from "@/components/images_grid";
+import Gallery from "@/components/images_grid";
 
 export default function Pictures() {
   return (
-    <section>
-      <div className="flex justify-center">
-        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center pb-2">
-          Stunning Glass Jobs Done
+    <section className="py-12 text-center">
+      <div className="mb-8">
+        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-600">
+          Discover Our Stunning Glass Artworks
         </h1>
       </div>
-      <hr className="solid pb-3" />
-      <div>
-        <Gallary />
+      <hr className="border-t-2 border-gray-400 mb-8" />
+      <div className="container mx-auto">
+        <Gallery />
       </div>
     </section>
   );
