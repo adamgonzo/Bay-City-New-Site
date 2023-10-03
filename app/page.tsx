@@ -1,8 +1,10 @@
-import Image from "next/image";
-import { about, name } from "@/lib/info";
-import glass from "../images/glass1.png";
+import { about } from "@/lib/info";
 
-export const metadata = {
+import type { Metadata } from "next";
+import glass from "../images/glass1.png";
+import Image from "next/image";
+
+export const metadata: Metadata = {
   description:
     "Glass Installer, Windows, Showers, Glass Railings, Glass Stair Cases, Insulated Glass Units",
   openGraph: {
@@ -11,33 +13,27 @@ export const metadata = {
       "Glass Installer, Windows, Showers, Glass Railings, Glass Stair Cases, Insulated Glass Units",
     url: "https://baycitygeneralglass.net",
     siteName: "Bay City General Glass",
-    images: [
-      {
-        url: "https://baycitygeneralglass.net/orig.jpeg",
-        width: 1920,
-        height: 1080,
-      },
-    ],
     locale: "en-Us",
     type: "website",
   },
 };
 
-export default async function HomePage() {
+export default function HomePage() {
   return (
-    <section className="flex flex-col">
-      <h1 className="font-serif text-3xl font-bold flex justify-center">
-        {name}
-      </h1>
-      <p className="my-5 text-neutral-800 dark:text-neutral-200 flex items-center font-medium ">
-        {about()}
-      </p>
-      <div className="flex justify-center my-8 flex-row ">
-        {<Image alt={name} src={glass} width={400} height={100} priority />}
+    <section className="flex flex-col items-center justify-center py-4 text-white">
+      <div className="mb-2 md:mb-12 w-3/4">
+        <Image
+          alt="Bay City General Glass"
+          src={glass}
+          width={800}
+          height={300}
+          priority
+          className="rounded-lg"
+        />
       </div>
-      <p className="my-5 text-neutral-800 dark:text-neutral-200 font-shantel font-medium">
-        {about()}
-      </p>
+      <div className="text-center mb-4">
+        <p className="text-sm md:text-lg text-white mb-2">{about()}</p>
+      </div>
     </section>
   );
 }
