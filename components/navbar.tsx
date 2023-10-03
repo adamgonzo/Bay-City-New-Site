@@ -40,13 +40,13 @@ export default function Navbar() {
 
   return (
     <aside className="font-serif">
-      <nav className="fixed top-0 left-0 right-0 flex justify-center space-x-8 p-4 text-lg fixed z-50 bg-stone-400">
+      <nav className="fixed top-0 left-0 right-0 flex justify-center space-x-8 p-4 text-lg fixed z-50 bg-gray-800 text-white">
         {/* Nav links */}
         {Object.entries(navItems).map(([path, { name }]) => (
           <Link
             key={path}
             href={path}
-            className={path === pathname ? "font-bold" : ""}
+            className={path === pathname ? "font-bold" : "mx-4 hover:underline"}
           >
             {name}
           </Link>
