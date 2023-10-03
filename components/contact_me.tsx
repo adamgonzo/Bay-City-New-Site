@@ -6,7 +6,7 @@ export default function ContactMe() {
   return (
     <section>
       <div>
-        <ContactForm></ContactForm>
+        <ContactForm />
       </div>
     </section>
   );
