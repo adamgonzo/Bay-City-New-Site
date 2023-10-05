@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Telephone from "@/images/icons";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -47,8 +48,8 @@ export default function ContactForm() {
           Contact Us for Your Glass Needs
         </h1>
         <p className="text-sm mb-6 text-center text-gray-600">
-          Reach out to us with details about your project, and we'll provide you
-          with expert advice and a precise estimate tailored to your
+          Reach out to us with details about your project, and we&aposll provide
+          you with expert advice and a precise estimate tailored to your
           requirements.
         </p>
 
@@ -92,11 +93,22 @@ export default function ContactForm() {
           >
             {loading ? "Sending..." : "Submit"}
           </button>
+          <a
+            href="tel:+15102587839"
+            className="flex justify-center gap-2 border rounded-lg mt-5 p-5 border-white bg-blue-200"
+          >
+            <div className="flex-col pt-1 text-center">
+              <Telephone />{" "}
+            </div>
+            <div href="tel:+15102587839" className="text-blue-600">
+              : 510-258-7839
+            </div>
+          </a>
         </form>
 
         {submitted && (
           <div className="mt-4 p-3 bg-green-100 text-green-600 rounded-lg text-center">
-            Thank you! We'll be in touch shortly.
+            Thank you! We&aposll be in touch shortly.
           </div>
         )}
       </div>
