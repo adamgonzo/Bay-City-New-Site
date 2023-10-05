@@ -1,7 +1,6 @@
 import { about } from "@/lib/info";
-
 import type { Metadata } from "next";
-import glass from "../images/glass1.png";
+import glass from "../images/bayCityGeneral.jpg";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -20,19 +19,23 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <section className="flex flex-col items-center justify-center py-4 text-white">
-      <div className="mb-2 md:mb-12 w-3/4">
+    <section className="flex flex-col items-center justify-center text-white">
+      <div className="mb-2 md:mb-12 relative">
         <Image
           alt="Bay City General Glass"
           src={glass}
-          width={800}
+          width={400}
           height={300}
           priority
-          className="rounded-lg"
+          className="rounded-lg mix-blend-multiply"
         />
       </div>
       <div className="text-center mb-4">
-        <p className="text-sm md:text-lg text-white mb-2">{about()}</p>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-black mb-2 relative flex justify-center">
+          Bay City General Glass
+        </h1>
+        <hr className="border-black p-3" />
+        <p className="text-md md:text-lg text-black mb-2 pt-5">{about()}</p>
       </div>
     </section>
   );
