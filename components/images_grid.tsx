@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import {
@@ -39,7 +38,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 md:w-[100vh]">
       <div className="mb-4 flex items-center">
         <label htmlFor="category" className="mr-2 text-gray-700 font-semibold">
           Choose a Category:
@@ -57,7 +56,7 @@ export default function Gallery() {
           ))}
         </select>
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 auto-cols-fr gap-3">
         {filteredPictures().map((img, index) => (
           <div
             className="h-80 relative rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
@@ -67,7 +66,7 @@ export default function Gallery() {
               className="h-full w-full object-cover"
               src={img}
               alt={`Gallery Image ${index}`}
-              layout="fill"
+              fill={true}
             />
           </div>
         ))}
