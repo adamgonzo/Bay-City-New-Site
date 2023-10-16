@@ -17,9 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased flex flex-col items-center justify-center min-h-screen mx-4 mt-8 md:mt-20 lg:mt-32 lg:mx-auto text-black">
+      <body className="antialiased flex flex-col min-h-screen mx-4 mt-8 md:mt-20 lg:mt-32 lg:mx-auto text-black">
         <Navbar />
-        <main className="mt-6 md:mt-0 px-2 md:px-0">{children}</main>
+        <div className="mt-10 md:mt-12 lg:mt-1 px-2 md:px-0">{children}</div>
         <Footer />
       </body>
     </html>

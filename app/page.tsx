@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen w-full max-w-screen-lg mx-auto">
-      <div className="grid grid-cols-3 gap-20 items-center m-auto">
+    <section className="flex flex-col items-center justify-center min-h-screen w-full max-w-screen-lg mx-auto pt-20 md:pt-28 lg:pt-32">
+      <div className="grid lg:grid-cols-3 auto-cols-fr gap-20 items-center m-auto">
         <div className="flex flex-col justify-center items-center bg-gray-200 p-4 rounded-lg border-black border-3">
-          <div>
+          <div id="Services">
             <h2 className="text-xl font-semibold mb-4">Services</h2>
             <ul className="list-disc ml-6 mb-4">
               <li>Mirrors</li>
@@ -72,7 +72,9 @@ export default function HomePage() {
           </span>
         </h1>
         <hr className="border-black border-3" />
-        <p className="text-md md:text-lg text-black mb-4 pt-5">{about()}</p>
+        <p className="text-md md:text-lg text-black mb-4 pt-5" id="About">
+          {about()}
+        </p>
       </div>
     </section>
   );
