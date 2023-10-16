@@ -19,26 +19,46 @@ import {
   storefront4,
 } from "../images/index";
 
-const categories = ["Shower", "Storefront", "Stair Railing"];
+const categories = ["All", "Shower", "Storefront", "Stair Railing"];
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
+  const allPictures = [
+    shower1,
+    shower2,
+    shower3,
+    shower4,
+    shower5,
+    shower6,
+    shower7,
+    storefront1,
+    storefront2,
+    storefront3,
+    storefront4,
+    stairRailing1,
+    stairRailing2,
+    stairRailing3,
+    stairRailing4,
+  ];
+
   const filteredPictures = () => {
     switch (selectedCategory.toLowerCase()) {
+      case "all":
+        return allPictures;
       case "shower":
-        return [shower1, shower2, shower3, shower4, shower5, shower6, shower7];
+        return allPictures.slice(0, 7);
       case "storefront":
-        return [storefront1, storefront2, storefront3, storefront4];
+        return allPictures.slice(7, 11);
       case "stair railing":
-        return [stairRailing1, stairRailing2, stairRailing3, stairRailing4];
+        return allPictures.slice(11);
       default:
         return [];
     }
   };
 
   return (
-    <div className="p-4 md:w-[100vh]">
+    <div className="p-4">
       <div className="mb-4 flex items-center">
         <label htmlFor="category" className="mr-2 text-gray-700 font-semibold">
           Choose a Category:
@@ -63,7 +83,7 @@ export default function Gallery() {
             key={index}
           >
             <Image
-              className="h-full w-full object-cover"
+              className="h-full w-full object-fill"
               src={img}
               alt={`Gallery Image ${index}`}
               fill={true}
