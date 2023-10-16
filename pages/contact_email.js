@@ -42,19 +42,19 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center ">
+    <div className="min-h-screen flex items-center justify-center pb-4 pt-20">
       <div className="max-w-md w-full p-8 rounded-lg shadow-lg bg-white">
-        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
+        <h1 className="text-3xl font-bold mb-2 text-center text-gray-800">
           Contact Us for Your Glass Needs
         </h1>
-        <p className="text-sm mb-6 text-center text-gray-600">
+        <p className="text-sm mb-3 text-center text-gray-600">
           Reach out to us with details about your project, and we&aposll provide
           you with expert advice and a precise estimate tailored to your
           requirements.
         </p>
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+          <div className="mb-3">
             <input
               className="w-full border p-3 rounded-md"
               value={name}
@@ -64,7 +64,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-3">
             <input
               className="w-full border p-3 rounded-md"
               type="email"
@@ -75,7 +75,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-3">
             <textarea
               className="w-full border p-3 rounded-md"
               value={message}
@@ -93,22 +93,27 @@ export default function ContactForm() {
           >
             {loading ? "Sending..." : "Submit"}
           </button>
-          <a
-            href="tel:+15102587839"
-            className="flex justify-center gap-2 border rounded-lg mt-5 p-5 border-white bg-blue-200"
+          <button
+            className="w-full bg-blue-200 text-white p-3 mt-3 rounded-md hover-bg-blue-600 transition duration-300"
+            type="button"
           >
-            <div className="flex-col pt-1 text-center">
-              <Telephone />{" "}
-            </div>
-            <div href="tel:+15102587839" className="text-blue-600">
-              : 510-258-7839
-            </div>
-          </a>
+            <a
+              href="tel:+15102587839"
+              className="flex justify-center no-underline gap-2 font-bold"
+            >
+              <div className="flex-col pt-1 text-center">
+                <Telephone />{" "}
+              </div>
+              <div href="tel:+15102587839" className="text-blue-600">
+                Call Now
+              </div>
+            </a>
+          </button>
         </form>
 
         {submitted && (
           <div className="mt-4 p-3 bg-green-100 text-green-600 rounded-lg text-center">
-            Thank you! We&aposll be in touch shortly.
+            Thank you! We&apos;ll be in touch shortly.
           </div>
         )}
       </div>
