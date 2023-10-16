@@ -1,76 +1,58 @@
 "use client";
+
+import React, { useState } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 import Image from "next/image";
-import React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import logo from "../images/bayCityGeneral.jpg";
 
-const navItems = {
-  "/": {
-    name: "Home",
-    x: 3,
-    y: 0,
-    w: "64px",
-  },
-  "/pictures": {
-    name: "Gallery",
-    x: 65,
-    y: 36,
-    w: "85px",
-  },
-  "/contact": {
-    name: "Contact",
-    x: 143,
-    y: 70,
-    w: "80px",
-  },
-};
+export default function NavbarLink() {
+  const [expanded, setExpanded] = useState(false);
 
-const Navbar = () => {
-  type NavItemsKeys = keyof typeof navItems;
-  let pathname: NavItemsKeys = "/";
-  const pathnameFromUsePathname = usePathname();
-  if (
-    pathnameFromUsePathname &&
-    Object.keys(navItems).includes(pathnameFromUsePathname)
-  ) {
-    pathname = pathnameFromUsePathname as NavItemsKeys;
-  }
+  const toggleNavbar = () => {
+    setExpanded(!expanded);
+  };
 
   return (
-    <aside className="font-serif">
-      <nav className="fixed top-0 left-0 right-0 flex justify-between items-center p-3 z-50 bg-gray-500 text-white">
-        <div className="flex items-center space-x-2">
+    <Navbar bg="white" variant="primary" expand="lg" fixed="top">
+      <Container className="flex items-center justify-between w-full">
+        <Navbar.Brand href="/" className="d-flex align-items-center">
           <Image
-            className="h-20 w-20 mix-blend-multiply"
+            alt="Bay City General Glass"
             src={logo}
-            alt="logo"
+            width={50}
+            height={50}
+            style={{ width: "auto", height: "auto" }} // Inline styles to maintain aspect ratio
+            className="d-inline-block align-top mr-2"
           />
-          <div className="flex-row-reverse">
-            <span className="text-xl font-bold flex">
+          <div className="flex flex-col">
+            <span className="text-md font-bold md:text-2xl">
               Bay City General Glass
             </span>
-            <span className="text-sm font-medium flex text-center font-sans">
-              CA LIC# C17813733
-            </span>
           </div>
-        </div>
-        <div className="flex space-x-8 text-xl">
-          {Object.entries(navItems).map(([path, { name }]) => (
-            <Link
-              key={path}
-              href={path}
-              className={
-                path === pathname ? "font-bold" : "mx-4 hover:underline"
-              }
-            >
-              {name}
-            </Link>
-          ))}
-        </div>
-      </nav>
-    </aside>
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={toggleNavbar}
+        />
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className={`${expanded ? "show" : ""} lg:flex`}
+        >
+          <Nav className="ml-auto text-md font-medium font-sans text-xl">
+            <Nav.Link href="/" className="nav-link">
+              Home
+            </Nav.Link>
+            <Nav.Link href="/pictures" className="nav-link">
+              Gallery
+            </Nav.Link>
+            <Nav.Link href="/contact" className="nav-link">
+              Pricing
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
-
-export default Navbar;
+}
