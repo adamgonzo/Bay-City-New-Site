@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Bay City General Glass",
   description:
-    "Glass company in the Bay Area that specializes in glass railings, showers, mirrors, Insulated Glass, Store Fronts",
+    "Glass company in the Bay Area that specializes in glass railings, showers, mirrors, Insulated Glass, Store Fronts, etc",
   icons: {
     icon: "/favicon.ico",
   },
