@@ -1,9 +1,15 @@
 import { about } from "@/lib/info";
 import type { Metadata } from "next";
-import glass from "../images/bayCityGeneral.jpg";
-import companyname from "../images/companyName.png";
-import Image from "next/image";
 import ImageMontage from "@/components/image_montage";
+import {
+  Money,
+  Professional,
+  Calendar,
+  FastService,
+  Certificate,
+  CustomWork,
+} from "@/images/icons";
+import "../public/styles/appPageStyle.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.baycitygeneralglass.net"),
@@ -23,11 +29,96 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <section className="flex flex-col items-center justify-center min-h-screen w-full max-w-screen-lg mx-auto pt-20 md:pt-28 lg:pt-32">
-      <div className="grid lg:grid-cols-3 auto-cols-fr gap-20 items-center m-auto">
-        <div className="flex flex-col justify-center items-center bg-gray-200 p-4 rounded-lg border-black border-3">
-          <div id="Services">
-            <h2 className="text-xl font-semibold mb-4">Services</h2>
-            <ul className="list-disc ml-6 mb-4">
+      <div className="flex justify-center items-center p-1 rounded-lg border-black border-3">
+        <ImageMontage />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 mb-6 mx-auto p-6 border-3 border-transparent shadow-2xl rounded-lg w-full justify-center ">
+        <div className="flex items-center p-2 rounded-lg bg-[#d5edf6]">
+          <div className="w-10 h-10 mr-3 rounded-full flex items-center justify-center  text-white ">
+            <Money />
+          </div>
+          <span className="text-lg font-medium">Free Estimate</span>
+        </div>
+        <div className="flex items-center p-2 rounded-lg bg-[#d5edf6]">
+          <div className="w-10 h-10 mr-3 rounded-full flex items-center justify-center text-white">
+            <Calendar />
+          </div>
+          <span className="text-lg font-medium">Open Monday-Friday</span>
+        </div>
+        <div className="flex items-center p-2 rounded-lg bg-[#d5edf6]">
+          <div className="w-10 h-10 mr-3 rounded-full flex items-center justify-center  text-white">
+            <FastService />
+          </div>
+          <span className="text-lg font-medium">Fast Service</span>
+        </div>
+        <div className="flex items-center p-2 rounded-lg bg-[#d5edf6]">
+          <div className="w-10 h-10 mr-3 rounded-full flex items-center justify-center text-white">
+            <Certificate />
+          </div>
+          <span className="text-lg font-medium">Licensed</span>
+        </div>
+        <div className="flex items-center p-2 rounded-lg bg-[#d5edf6]">
+          <div className="w-10 h-10 mr-3 rounded-full flex items-center justify-center text-white">
+            <CustomWork />
+          </div>
+          <span className="text-lg font-medium">Custom Glazing Solutions</span>
+        </div>
+        <div className="flex items-center p-2 rounded-lg bg-[#d5edf6]">
+          <div className="w-10 h-10 mr-3 rounded-full flex items-center justify-center text-white">
+            <Professional />
+          </div>
+          <span className="text-lg font-medium">
+            Experienced Glazing Experts
+          </span>
+        </div>
+      </div>
+
+      <div className="p-6 mt-6 rounded-lg  shadow-lg text-center">
+        <h1 className=" text-3xl font-bold mb-4 ">Get A Free Estimate Today</h1>
+        <div className="mb-6 text-lg">
+          At Bay City General Glass, we believe in transparent and hassle-free
+          services. Take the first step towards enhancing your space with our
+          high-quality glass products. Whether you&apos;re a homeowner looking
+          to revamp your windows or a business owner in need of custom glass
+          solutions, we&apos;re here to help. Contact us today for a free
+          estimate. Our expert team will assess your needs, discuss your vision,
+          and provide you with a detailed quote, ensuring you have a clear
+          understanding of the possibilities that lie ahead. Let&apos;s bring
+          your glass project to life without any upfront costs – because
+          transforming your space should be as effortless as enjoying the final
+          result.
+        </div>
+        <div className="flex justify-center ">
+          <button className="button-74 w-1/2 mx-auto text-center" role="button">
+            <a href="/contact" className="no-underline text-black font-bold">
+              CONTACT US
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div className="p-6 mt-5 mb-3 rounded-lg shadow-lg ">
+        <div className="flex flex-col items-center mb-4">
+          <h1 className="font-semibold text-2xl mb-2">
+            What You Will Get Working With Bay City General Glass
+          </h1>
+          <p className="text-gray-600">
+            Residential & Commercial Glass is our Specialty!
+          </p>
+        </div>
+
+        <hr className="border-b border-3 border-gray-400 mb-4" />
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="flex justify-center text-lg text-gray-700">
+            {about()}
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg border-2 border-black">
+            <h2 className="text-xl font-semibold mb-4 text-center">
+              Our Services
+            </h2>
+            <ul className="list-disc list-inside text-lg flex flex-col gap-2 items-start">
               <li>Mirrors</li>
               <li>Showers</li>
               <li>Insulated Glass</li>
@@ -40,41 +131,69 @@ export default function HomePage() {
               <li>Store Front Glass Replacements</li>
               <li>Architectural Interior Glass Walls</li>
             </ul>
-            <a
-              href="/contact"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold no-underline rounded-full py-3 px-6 text-lg transition duration-300 ease-in-out flex items-center justify-center mt-4"
+            <button
+              className="button-74 w-full mt-2 mx-auto text-center"
+              role="button"
             >
-              Contact Us
-            </a>
+              <a href="/contact" className="no-underline text-black font-bold">
+                CONTACT US
+              </a>
+            </button>
           </div>
-        </div>
-
-        <div className="flex justify-center items-center">
-          <Image
-            alt="Bay City General Glass"
-            src={glass}
-            width={300}
-            height={300}
-            priority
-            className="rounded-lg mix-blend-multiply"
-            style={{ width: "auto", height: "auto" }}
-          />
-        </div>
-        <div className="flex justify-center items-center bg-gray-200 p-1 rounded-lg border-black border-3">
-          <ImageMontage />
         </div>
       </div>
 
-      <div className="mt-6 items-center mx-auto">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4 relative flex justify-center">
-          <span className="text-transparent text-shadow-gray-500 font-bold">
-            <Image alt="Bay City General Glass" src={companyname} priority />
-          </span>
-        </h1>
-        <hr className="border-black border-3" />
-        <p className="text-md md:text-lg text-black mb-4 pt-5" id="About">
-          {about()}
-        </p>
+      <div className="grid auto-cols-fr mt-5 lg:grid-cols-2 gap-4 mb-5">
+        <div className="rounded-xl shadow-xl flex flex-col p-10">
+          <h1 className="flex justify-center text-2xl font-semibold mb-4">
+            Residential Glass
+          </h1>
+          <p className="text-center">
+            Residential glass solutions are designed to enhance the beauty and
+            functionality of your home. From elegant mirrors that reflect your
+            style to custom-designed shower enclosures offering both luxury and
+            privacy, our residential glass services transform living spaces. Our
+            insulated glass solutions provide energy efficiency, ensuring your
+            home remains comfortable year-round. Explore our range of glass
+            options for windows, doors, and interior spaces, tailored to elevate
+            your home&apos;s ambiance.
+          </p>
+          <a
+              href="/residential"
+              className="no-underline text-black font-bold"
+          >
+          <button
+            className="button-74 w-full mt-3 mx-auto text-center"
+            role="button"
+          >
+
+              Learn More
+          </button>
+          </a>
+        </div>
+        <div className="rounded-xl shadow-xl flex flex-col p-10">
+          <h1 className="flex justify-center text-2xl font-semibold mb-4">
+            Commercial Glass
+          </h1>
+          <p className="text-center ">
+            Commercial glass installations offer businesses innovative solutions
+            for modern spaces. Our custom glass designs cater to storefronts,
+            office partitions, and architectural glass walls, creating an open
+            and inviting atmosphere. Durable and stylish, our glass products
+            provide functionality while adding a touch of sophistication.
+            Discover our range of glass options tailored for commercial
+            applications, designed to leave a lasting impression on your clients
+            and customers.
+          </p>
+          <a href="/commercial" className="no-underline text-black font-bold mt-auto">
+          <button
+            className="button-74 w-full mx-auto text-center"
+            role="button"
+          >
+              Learn More
+          </button>
+          </a>
+        </div>
       </div>
     </section>
   );
