@@ -1,37 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Tailwind CSS styles */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
+/* Custom styles */
 :root {
-  --foreground-rgb: 255, 255, 255; /* Text color */
+  --foreground-rgb: 0, 0, 0; /* Text color */
+  --background-rgb: 240, 240, 240; /* Background color */
   --background-glass-rgb: 211, 208, 203; /* Glass color */
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(
-    var(--background-glass-rgb),
-    0.8
-  ); /* Glass Color with Opacity */
-  z-index: -1;
+body {
+  background-image: linear-gradient(
+    to right top,
+    #ffffff,
+    #f4f4f4,
+    #eae9ea,
+    #e0dede,
+    #d6d3d3
+  );
 }
 
-body {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8));
-  color: rgb(var(--foreground-rgb));
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
