@@ -17,7 +17,7 @@ import {
   storefront2,
   storefront3,
   storefront4,
-} from "../images/index";
+} from "../images";
 
 const categories = ["All", "Shower", "Storefront", "Stair Railing"];
 
