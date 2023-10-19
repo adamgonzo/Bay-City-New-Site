@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Telephone from "@/images/icons";
+import { Telephone } from "@/images/icons";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -87,7 +87,7 @@ export default function ContactForm() {
           </div>
 
           <button
-            className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 transition duration-300"
+            className="w-full bg-blue-500 text-white font-bold sm:text-sm md:text-md lg:text-lg p-3 rounded-md hover:bg-blue-600 transition duration-300"
             type="submit"
             disabled={loading}
           >
@@ -104,7 +104,7 @@ export default function ContactForm() {
               <div className="flex-col pt-1 text-center">
                 <Telephone />{" "}
               </div>
-              <div href="tel:+15102587839" className="text-blue-600">
+              <div href="tel:+15102587839" className="text-blue-600 font-bold text-md">
                 Call Now
               </div>
             </a>
