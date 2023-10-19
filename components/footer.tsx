@@ -6,7 +6,7 @@ import logo from "../images/bayCityGeneral.jpg";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black py-2">
+    <footer className="bg-white text-black py-2 ">
       <Container fluid className="text-center">
         <Row className="mb-3 flex justify-between">
           <Col
@@ -25,7 +25,7 @@ export default function Footer() {
               <div>
                 <h1 className="text-sm mb-1">Bay City General Glass</h1>
                 <div className="text-xs">
-                  San Francisco, CA | Phone: (510) 258-7839
+                  San Lorenzo, CA | Phone: (510) 258-7839
                 </div>
               </div>
             </div>
