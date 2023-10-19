@@ -89,11 +89,14 @@ export default function HomePage() {
           result.
         </div>
         <div className="flex justify-center ">
-          <button className="button-74 w-1/2 mx-auto text-center" role="button">
-            <a href="/contact" className="no-underline text-black font-bold">
+          <a href="/contact" className="button-74 mx-auto w-full text-center">
+            <button
+              className="mx-auto text-center flex justify-center"
+              role="button"
+            >
               CONTACT US
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
       </div>
 
@@ -158,17 +161,13 @@ export default function HomePage() {
             options for windows, doors, and interior spaces, tailored to elevate
             your home&apos;s ambiance.
           </p>
-          <a
-              href="/residential"
-              className="no-underline text-black font-bold"
-          >
-          <button
-            className="button-74 w-full mt-3 mx-auto text-center"
-            role="button"
-          >
-
+          <a href="/residential" className="no-underline text-black font-bold">
+            <button
+              className="button-74 w-full mt-3 mx-auto text-center"
+              role="button"
+            >
               Learn More
-          </button>
+            </button>
           </a>
         </div>
         <div className="rounded-xl shadow-xl flex flex-col p-10">
@@ -185,13 +184,16 @@ export default function HomePage() {
             applications, designed to leave a lasting impression on your clients
             and customers.
           </p>
-          <a href="/commercial" className="no-underline text-black font-bold mt-auto">
-          <button
-            className="button-74 w-full mx-auto text-center"
-            role="button"
+          <a
+            href="/commercial"
+            className="no-underline text-black font-bold mt-auto"
           >
+            <button
+              className="button-74 w-full mx-auto text-center"
+              role="button"
+            >
               Learn More
-          </button>
+            </button>
           </a>
         </div>
       </div>

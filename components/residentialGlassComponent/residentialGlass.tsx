@@ -1,17 +1,15 @@
 "use client";
 import React from "react";
-import { Button } from "react-bootstrap";
 import {
   showerGlass,
   mirrorGlass,
   glassTable,
   glassDoor,
   cabinetGlass,
-  brokenGlass
+  brokenGlass,
 } from "../../images/ResidentialPageImages";
 import Image from "next/image";
-import "./index.css"
-
+import "./index.css";
 
 const services = [
   {
@@ -54,33 +52,39 @@ const services = [
 
 export default function ResidentialGlass() {
   return (
-      <section className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-              <div key={index} className="rounded-xl bg-white shadow-xl p-4 md:p-6 flex flex-col items-center">
-                <div className="w-full h-48 md:h-72 overflow-hidden mb-4">
-                  <Image
-                      src={service.image}
-                      alt="Service"
-                      className="w-full h-full object-cover"
-                  />
-                </div>
-                <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-center">
-                  {service.title}
-                </h2>
-                <p className="text-sm md:text-base lg:text-lg text-gray-600 text-center mb-4">
-                  {service.description}
-                </p>
-                <div className="w-full mt-auto">
-                  <a className="no-underline text-white text-sm md:text-md lg:text-lg xl:text-lg" href="/contact">
-                  <button  className="button-50 mx-auto" role="button">
-                      Free Estimate
-                  </button>
-                  </a>
-                </div>
-              </div>
-          ))}
-        </div>
-      </section>
+    <section className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="rounded-xl bg-white shadow-xl p-4 md:p-6 flex flex-col items-center"
+          >
+            <div className="w-full h-48 md:h-72 overflow-hidden mb-4">
+              <Image
+                src={service.image}
+                alt="Service"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-center">
+              {service.title}
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg text-gray-600 text-center mb-4">
+              {service.description}
+            </p>
+            <div className="w-full mt-auto">
+              <a
+                className="no-underline text-white text-sm md:text-md lg:text-lg xl:text-lg"
+                href="/contact"
+              >
+                <button className="button-50 mx-auto" role="button">
+                  Free Estimate
+                </button>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

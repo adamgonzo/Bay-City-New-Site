@@ -104,7 +104,10 @@ export default function ContactForm() {
               <div className="flex-col pt-1 text-center">
                 <Telephone />{" "}
               </div>
-              <div href="tel:+15102587839" className="text-blue-600 font-bold text-md">
+              <div
+                href="tel:+15102587839"
+                className="text-blue-600 font-bold text-md"
+              >
                 Call Now
               </div>
             </a>

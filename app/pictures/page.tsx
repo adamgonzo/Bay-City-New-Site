@@ -1,5 +1,5 @@
 import Gallery from "@/components/images_grid";
-import "../../public/styles/styleForGalleryPage.css"
+import "../../public/styles/styleForGalleryPage.css";
 
 export default function Pictures() {
   return (
