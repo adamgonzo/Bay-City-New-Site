@@ -18,7 +18,7 @@ export default function NavbarLink() {
   return (
     <Navbar className="bg-gray-300" variant="primary" expand="lg" fixed="top">
       <Container className="flex flex-col">
-        <div className="flex items-center justify-center w-full p-3 sm:p-1 md:p-1 lg:p-1">
+        <div className="flex items-center justify-center w-full p-lg-1 p-md-2 p-3">
           <div className="flex items-center gap-10">
             <div className="hidden md:block">
               <Image
