@@ -16,38 +16,46 @@ export default function NavbarLink() {
   };
 
   return (
-    <Navbar bg="white" variant="primary" expand="lg" fixed="top">
+    <Navbar className="bg-gray-300" variant="primary" expand="lg" fixed="top">
       <Container className="flex flex-col">
-        <div className="flex items-center justify-center w-full">
-          <div className="flex items-center">
-            <Image
-              alt="Bay City General Glass"
-              src={logo}
-              width={50}
-              height={50}
-              style={{ width: "auto", height: "auto" }}
-              className="d-inline-block align-top"
-            />
-            <span className="text-transparent text-shadow-gray-500 font-bold ml-2 mr-2">
+        <div className="flex items-center justify-center w-full p-3 sm:p-1 md:p-1 lg:p-1">
+          <div className="flex items-center gap-10">
+            <div className="hidden md:block">
+              <Image
+                alt="Bay City General Glass"
+                src={logo}
+                width={50}
+                height={50}
+                style={{ width: "auto", height: "auto" }}
+                className="d-inline-block align-top mix-blend-multiply"
+              />
+            </div>
+            <span className="text-transparent text-shadow-gray-500 font-bold ml-2 mr-2 ">
               <Image
                 alt="Bay City General Glass"
                 src={companyname}
                 priority
                 style={{ width: "auto", height: "auto" }}
               />
+              <span className="text-black leading-tight tracking-wide text-center justify-center hidden md:block">
+                Professional Quality Workmanship
+              </span>
             </span>
-            <Image
-              alt="Bay City General Glass"
-              src={logo}
-              width={50}
-              height={50}
-              style={{ width: "auto", height: "auto" }}
-              className="d-inline-block align-top scale-x-[-1] "
-            />
+            <div className="hidden lg:block">
+              <Image
+                alt="Bay City General Glass"
+                src={logo}
+                width={50}
+                height={50}
+                style={{ width: "auto", height: "auto" }}
+                className="d-inline-block align-top scale-x-[-1] mix-blend-multiply "
+              />
+            </div>
           </div>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             onClick={toggleNavbar}
+            className="ml-10 "
           />
         </div>
         <Navbar.Collapse

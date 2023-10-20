@@ -1,7 +1,7 @@
 /* CSS */
 .button-50 {
   appearance: button;
-  background-color: #000;
+  background-color: #d5edf6;
   background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
@@ -13,8 +13,8 @@
   cursor: pointer;
   display: inline-block;
   font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 20px;
   margin: 0 5px 10px 0;
   overflow: visible;

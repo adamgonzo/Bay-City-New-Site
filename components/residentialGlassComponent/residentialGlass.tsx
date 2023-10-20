@@ -74,10 +74,10 @@ export default function ResidentialGlass() {
             </p>
             <div className="w-full mt-auto">
               <a
-                className="no-underline text-white text-sm md:text-md lg:text-lg xl:text-lg"
+                className="no-underline text-black text-sm md:text-md lg:text-lg xl:text-lg"
                 href="/contact"
               >
-                <button className="button-50 mx-auto" role="button">
+                <button className="button-50 mx-auto text-black" role="button">
                   Free Estimate
                 </button>
               </a>
