@@ -3,7 +3,7 @@ import CommercialGlass from "@/components/commercialGlassComponent/commercialGla
 
 export default function Commercial() {
   return (
-    <section className="py-12 text-center">
+    <section className="py-12 mt-5 text-center">
       <div className="bg-gray-500 text-white py-14 md:py-20 lg:py-12 xl:py-10">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">

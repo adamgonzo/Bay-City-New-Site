@@ -3,7 +3,7 @@ import ResidentialGlass from "@/components/residentialGlassComponent/residential
 
 export default function Residential() {
   return (
-    <section className="py-12 text-center">
+    <section className="py-12 mt-5 text-center">
       <div className="mb-8 shadow-xl">
         <div className="bg-gray-500 text-white py-20 text-center">
           <div className="container mx-auto">

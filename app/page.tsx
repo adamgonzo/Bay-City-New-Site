@@ -184,10 +184,7 @@ export default function HomePage() {
             applications, designed to leave a lasting impression on your clients
             and customers.
           </p>
-          <a
-            href="/commercial"
-            className="no-underline text-black font-bold mt-auto"
-          >
+          <a href="/commercial" className="no-underline text-black mt-auto">
             <button
               className="button-74 w-full mx-auto text-center"
               role="button"

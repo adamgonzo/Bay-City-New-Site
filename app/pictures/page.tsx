@@ -3,7 +3,7 @@ import "../../public/styles/styleForGalleryPage.css";
 
 export default function Pictures() {
   return (
-    <section className="py-12 text-center">
+    <section className="py-12 text-center mt-5">
       <div className="mb-8">
         <h1 className="banner flex justify-center p-3 sm:p-5 mt-2 font-bold lg:p-6">
           Gallery
