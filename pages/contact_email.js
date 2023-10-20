@@ -98,18 +98,13 @@ export default function ContactForm() {
             type="button"
           >
             <a
-              href="tel:+15102587839"
+              href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
               className="flex justify-center no-underline gap-2 font-bold"
             >
               <div className="flex-col pt-1 text-center">
                 <Telephone />{" "}
               </div>
-              <div
-                href="tel:+15102587839"
-                className="text-blue-600 font-bold text-md"
-              >
-                Call Now
-              </div>
+              <div className="text-blue-600 font-bold text-md">Call Now</div>
             </a>
           </button>
         </form>
