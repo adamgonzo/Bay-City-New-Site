@@ -14,9 +14,6 @@ Welcome to the Bay City Glass New Site repository! This website is built using N
   - **Residential and Commercial Sections:**
     - Choose between residential and commercial services right from the home page.
     - Click "More Information" to navigate to detailed pages for each category.
-  - **Projects:**
-    - Browse through our completed projects.
-    - Interested in a project? Click "Free Estimate" to get started.
   - **Information and Services:**
     - Find information about our services directly on the home page.
     - Quick access to our contact form for further inquiries.
@@ -24,6 +21,7 @@ Welcome to the Bay City Glass New Site repository! This website is built using N
 ## Technologies Used
 
 - **Framework:** Next.js
+- **Styling:** react, react-bootstrap, tailwindcss, and CSS
 - **API Integration:** SendGrid for contact form submissions
 
 Feel free to explore our codebase and contribute to making our website even better!
