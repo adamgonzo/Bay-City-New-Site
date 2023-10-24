@@ -13,17 +13,30 @@ import "../public/styles/appPageStyle.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.baycitygeneralglass.net"),
-  description:
-    "Glass Installer, Windows, Showers, Glass Railings, Glass Stair Cases, Insulated Glass Units",
-  openGraph: {
-    title: "Bay City General Glass",
-    description:
-      "Glass Installer, Windows, Showers, Glass Railings, Glass Stair Cases, Insulated Glass Units",
-    url: "https://baycitygeneralglass.net",
-    siteName: "Bay City General Glass",
-    locale: "en-Us",
-    type: "website",
+  title: {
+    absolute:
+      "Bay City General Glass | Expert Residential and Commercial Glass Installations",
   },
+  description:
+    "Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!",
+  openGraph: {
+    title:
+      "Bay City General Glass | Expert Residential and Commercial Glass Installations",
+    description:
+      "Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!",
+    url: "https://www.baycitygeneralglass.net",
+    siteName: "Bay City General Glass",
+    locale: "en-US",
+    type: "website",
+    images: [
+      {
+        url: "https://www.baycitygeneralglass.net/images/homepage-banner.jpg",
+        alt: "Bay City General Glass",
+      },
+    ],
+  },
+  keywords:
+    "glass installer, residential glass, commercial glass, mirrors, showers, insulated glass, glass railings, entry doors, expert glass installations",
 };
 
 export default function HomePage() {
