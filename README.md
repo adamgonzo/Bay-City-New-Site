@@ -5,9 +5,11 @@ Welcome to the Bay City Glass New Site repository! This website is built using N
 ## Features
 
 - **Contact Form with SendGrid API:**
+
   - Easily get in touch with us through our contact form. Leave your name, email, and a message. Prefer a call? There's also a "Call Me" button for your convenience.
 
 - **Gallery Page:**
+
   - Explore our work through our gallery page. View stunning showers, store fronts, and glass railings. More categories coming soon!
 
 - **Home Page:**
@@ -26,6 +28,6 @@ Welcome to the Bay City Glass New Site repository! This website is built using N
 
 Feel free to explore our codebase and contribute to making our website even better!
 
-For any questions or collaborations, please don't hesitate to contact us.
+For any questions or collaborations, please don't hesitate to contact us thank you.
 
 [Contact Us](https://www.baycitygeneralglass.net/contact)
