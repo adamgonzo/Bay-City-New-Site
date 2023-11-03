@@ -1,43 +1,45 @@
-import { about } from "@/lib/info";
-import type { Metadata } from "next";
-import ImageMontage from "@/components/image_montage";
+import { about } from '@/lib/info'
+import type { Metadata } from 'next'
+import ImageMontage from '@/components/image_montage'
 import {
   Money,
   Professional,
   Calendar,
   FastService,
   Certificate,
-  CustomWork,
-} from "@/images/icons";
-import "../public/styles/appPageStyle.css";
+  CustomWork
+} from '@/images/icons'
+import '../public/styles/appPageStyle.css'
+import Link from 'next/link'
+import YelpInformation from '@/components/yelpComponent'
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.baycitygeneralglass.net"),
+  metadataBase: new URL('https://www.baycitygeneralglass.net'),
   title: {
     absolute:
-      "Bay City General Glass | Expert Residential and Commercial Glass Installations",
+      'Bay City General Glass | Expert Residential and Commercial Glass Installations'
   },
   description:
-    "Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!",
+    'Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!',
   openGraph: {
     title:
-      "Bay City General Glass | Expert Residential and Commercial Glass Installations",
+      'Bay City General Glass | Expert Residential and Commercial Glass Installations',
     description:
-      "Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!",
-    url: "https://www.baycitygeneralglass.net",
-    siteName: "Bay City General Glass",
-    locale: "en-US",
-    type: "website",
+      'Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!',
+    url: 'https://www.baycitygeneralglass.net',
+    siteName: 'Bay City General Glass',
+    locale: 'en-US',
+    type: 'website',
     images: [
       {
-        url: "https://www.baycitygeneralglass.net/images/homepage-banner.jpg",
-        alt: "Bay City General Glass",
-      },
-    ],
+        url: 'https://www.baycitygeneralglass.net/images/homepage-banner.jpg',
+        alt: 'Bay City General Glass'
+      }
+    ]
   },
   keywords:
-    "glass installer, residential glass, commercial glass, mirrors, showers, insulated glass, glass railings, entry doors, expert glass installations",
-};
+    'glass installer, residential glass, commercial glass, mirrors, showers, insulated glass, glass railings, entry doors, expert glass installations'
+}
 
 export default function HomePage() {
   return (
@@ -125,12 +127,12 @@ export default function HomePage() {
 
         <hr className="border-b border-3 border-gray-400 mb-4" />
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 items-center">
           <div className="flex justify-center text-lg text-gray-700">
             {about()}
           </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg border-2 border-black">
+          <div className="bg-gray-100 p-4 rounded-lg border-2 border-black md:h-[620px] lg:h-full">
             <h2 className="text-xl font-semibold mb-4 text-center">
               Our Services
             </h2>
@@ -147,14 +149,19 @@ export default function HomePage() {
               <li>Store Front Glass Replacements</li>
               <li>Architectural Interior Glass Walls</li>
             </ul>
-            <button
-              className="button-74 w-full mt-2 mx-auto text-center"
-              role="button"
-            >
-              <a href="/contact" className="no-underline text-black font-bold">
-                CONTACT US
-              </a>
-            </button>
+            <div className="mt-4">
+              <button
+                className="button-74 w-full mx-auto text-center"
+                role="button"
+              >
+                <Link
+                  href="/contact"
+                  className="no-underline text-black font-bold"
+                >
+                  CONTACT US
+                </Link>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -207,6 +214,9 @@ export default function HomePage() {
           </a>
         </div>
       </div>
+      <div className="rounded-xl shadow-xl mb-4 mt-auto p-4 bg-gray-100">
+        <YelpInformation />
+      </div>
     </section>
-  );
+  )
 }
