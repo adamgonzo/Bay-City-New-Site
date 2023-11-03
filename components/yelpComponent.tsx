@@ -52,11 +52,9 @@ export default function YelpInformation() {
   return (
     <div className="mb-5">
       <div className="flex flex-col items-center gap-5 justify-center">
-        <div>
-          <h1 className="flex justify-center">
-            We appreciate feedback from our customers!
-          </h1>
-        </div>
+        <h1 className="flex justify-center ">
+          We appreciate feedback from our customers!
+        </h1>
         <Image src={yelp} alt="yelp" height={60} />
       </div>
       <div className="review-container overflow-hidden">
