@@ -150,17 +150,17 @@ export default function HomePage() {
               <li>Architectural Interior Glass Walls</li>
             </ul>
             <div className="mt-4">
-              <button
-                className="button-74 w-full mx-auto text-center"
-                role="button"
+              <Link
+                href="/contact"
+                className="no-underline text-black font-bold"
               >
-                <Link
-                  href="/contact"
-                  className="no-underline text-black font-bold"
+                <button
+                  className="button-74 w-full mx-auto text-center"
+                  role="button"
                 >
                   CONTACT US
-                </Link>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
