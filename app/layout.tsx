@@ -1,22 +1,33 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import Navbar from "@/components/navbar";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "@/components/footer";
+import './globals.css'
+import type { Metadata } from 'next'
+import Navbar from '@/components/navbar'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Footer from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: "Bay City General Glass",
+  title: 'Bay City General Glass',
   description:
-    "Glass company in the Bay Area that specializes in glass railings, showers, mirrors, Insulated Glass, Store Fronts, etc",
+    'Glass company in the Bay Area that specializes in glass railings, showers, mirrors, Insulated Glass, Store Fronts, etc',
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico'
   },
-};
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  }
+}
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -26,5 +37,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  );
+  )
 }
