@@ -1,0 +1,11 @@
+export default function robots() {
+  return {
+    rules: [
+      {
+        userAgent: '*'
+      }
+    ],
+    sitemap: 'https://baycitygeneralglass.net/sitemap.xml',
+    host: 'https://baycitygeneralglass.net'
+  }
+}
