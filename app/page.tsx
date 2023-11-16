@@ -186,7 +186,7 @@ export default function HomePage() {
               className="button-74 w-full mt-3 mx-auto text-center"
               role="button"
             >
-              Learn More
+              Residential Glass Information
             </button>
           </a>
         </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
               className="button-74 w-full mx-auto text-center"
               role="button"
             >
-              Learn More
+              Commercial Glass Information
             </button>
           </a>
         </div>
