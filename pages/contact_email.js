@@ -1,45 +1,45 @@
-import { useState } from "react";
-import { Telephone } from "@/images/icons";
+import { useState } from 'react'
+import { Telephone } from '@/images/icons'
 
 export default function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  const handleSubmit = async e => {
+    e.preventDefault()
+    setLoading(true)
 
     try {
-      const res = await fetch("/api/contact_email", {
-        method: "POST",
+      const res = await fetch('/api/contact_email', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           name,
           email,
-          message,
-        }),
-      });
+          message
+        })
+      })
 
-      const data = await res.json();
+      const data = await res.json()
       if (data.error) {
-        throw new Error(data.error);
+        throw new Error(data.error)
       }
 
-      setSubmitted(true);
-      setName("");
-      setEmail("");
-      setMessage("");
+      setSubmitted(true)
+      setName('')
+      setEmail('')
+      setMessage('')
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center pb-4 pt-20">
@@ -58,7 +58,7 @@ export default function ContactForm() {
             <input
               className="w-full border p-3 rounded-md"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={e => setName(e.target.value)}
               placeholder="Your Name"
               required
             />
@@ -69,7 +69,7 @@ export default function ContactForm() {
               className="w-full border p-3 rounded-md"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={e => setEmail(e.target.value)}
               placeholder="Your Email"
               required
             />
@@ -79,7 +79,7 @@ export default function ContactForm() {
             <textarea
               className="w-full border p-3 rounded-md"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={e => setMessage(e.target.value)}
               placeholder="How can we assist you?"
               rows="5"
               required
@@ -91,7 +91,7 @@ export default function ContactForm() {
             type="submit"
             disabled={loading}
           >
-            {loading ? "Sending..." : "Submit"}
+            {loading ? 'Sending...' : 'Submit'}
           </button>
           <button
             className="w-full bg-blue-200 text-white p-3 mt-3 rounded-md hover-bg-blue-600 transition duration-300"
@@ -102,7 +102,7 @@ export default function ContactForm() {
               className="flex justify-center no-underline gap-2 font-bold"
             >
               <div className="flex-col pt-1 text-center">
-                <Telephone />{" "}
+                <Telephone />{' '}
               </div>
               <div className="text-blue-600 font-bold text-md">Call Now</div>
             </a>
@@ -116,5 +116,5 @@ export default function ContactForm() {
         )}
       </div>
     </div>
-  );
+  )
 }

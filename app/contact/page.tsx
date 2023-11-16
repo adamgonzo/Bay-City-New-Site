@@ -1,8 +1,9 @@
-import ContactMe from "@/components/contact_me";
+'use client'
+import ContactForm from '@/pages/contact_email'
 export default function Contact() {
   return (
     <section>
-      <ContactMe />
+      <ContactForm />
     </section>
-  );
+  )
 }
