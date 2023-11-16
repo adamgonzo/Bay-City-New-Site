@@ -1,6 +1,29 @@
 import { useState } from 'react'
 import { Telephone } from '@/images/icons'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      'Gallery for Commercial and Residential Glass | Bay City General Glass'
+  },
+  metadataBase: new URL('https://www.baycitygeneralglass.net'),
+  description:
+    'Gallery displaying commerical jobs done and residential glass jobs done. Showing showers, glass railings, stair glass railings, and store fronts',
+  openGraph: {
+    title: 'Commercial Glass Services | Bay City General Glass',
+    description: 'Gallery displaying work done residential and commercial',
+    url: 'https://www.baycitygeneralglass.net/pictures',
+    siteName: 'Bay City General Glass',
+    locale: 'en-US',
+    type: 'website'
+  },
+  keywords:
+    'commercial glass services, storefront glass, glass mirrors, commercial doors, emergency board-up services, expert glass solutions, Bay City General Glass'
+}
+
+
 export default function ContactForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -8,7 +31,7 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     setLoading(true)
 
