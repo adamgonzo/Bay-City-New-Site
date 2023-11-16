@@ -1,5 +1,27 @@
-import React from "react";
-import ResidentialGlass from "@/components/residentialGlassComponent/residentialGlass";
+import React from 'react'
+import ResidentialGlass from '@/components/residentialGlassComponent/residentialGlass'
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Commercial Glass Services | Bay City General Glass'
+  },
+  metadataBase: new URL('https://www.baycitygeneralglass.net'),
+  description:
+    'Bay City General Glass specializes in commercial glass installations, including storefront glass, glass mirrors, commercial doors, and 24/7 emergency board-up services. Contact us for expert glass solutions for your business.',
+  openGraph: {
+    title: 'Commercial Glass Services | Bay City General Glass',
+    description:
+      'Bay City General Glass specializes in commercial glass installations, including storefront glass, glass mirrors, commercial doors, and 24/7 emergency board-up services. Contact us for expert glass solutions for your business.',
+    url: 'https://www.baycitygeneralglass.net/residential',
+    siteName: 'Bay City General Glass',
+    locale: 'en-US',
+    type: 'website'
+  },
+  keywords:
+    'commercial glass services, storefront glass, glass mirrors, commercial doors, emergency board-up services, expert glass solutions, Bay City General Glass'
+}
 
 export default function Residential() {
   return (
@@ -25,5 +47,5 @@ export default function Residential() {
         <ResidentialGlass />
       </div>
     </section>
-  );
+  )
 }

@@ -1,6 +1,25 @@
-import React from "react";
-import CommercialGlass from "@/components/commercialGlassComponent/commercialGlass";
+import React from 'react'
+import CommercialGlass from '@/components/commercialGlassComponent/commercialGlass'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Commercial Glass'
+  },
+  metadataBase: new URL('https://www.baycitygeneralglass.net'),
+  description:
+    'Commercial Glass Installations, Installing Storefront Glass, Glass Mirrors, Commercial Doors, and Board Ups for broken glass',
+  openGraph: {
+    title: 'Commercial Glass',
+    description:
+      'Commercial Glass Installations, Installing Storefront Glass, Glass Mirrors, Commercial Doors, and Board Ups for broken glass',
+    url: 'https://www.baycitygeneralglass.net/commercial',
+    siteName: 'Bay City General Glass',
+    locale: 'en-us',
+    type: 'website'
+  }
+}
 export default function Commercial() {
   return (
     <section className="py-12 mt-5 text-center">
@@ -26,5 +45,5 @@ export default function Commercial() {
         <CommercialGlass />
       </div>
     </section>
-  );
+  )
 }

@@ -1,58 +1,40 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import "./index.css";
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import './index.css'
 import {
   commercialMirror,
   commercialDoor,
   boardedCommercial,
-  storeFront,
-} from "../../images/CommercialPageImages/index";
-import type { Metadata } from "next";
+  storeFront
+} from '../../images/CommercialPageImages/index'
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Commercial Glass",
-  },
-  metadataBase: new URL("https://www.baycitygeneralglass.net"),
-  description:
-    "Commercial Glass Installations, Installing Storefront Glass, Glass Mirrors, Commercial Doors, and Board Ups for broken glass",
-  openGraph: {
-    title: "Commercial Glass",
-    description:
-      "Commercial Glass Installations, Installing Storefront Glass, Glass Mirrors, Commercial Doors, and Board Ups for broken glass",
-    url: "https://www.baycitygeneralglass.net/commercial",
-    siteName: "Bay City General Glass",
-    locale: "en-us",
-    type: "website",
-  },
-};
 const services = [
   {
-    title: "STOREFRONT GLASS",
+    title: 'STOREFRONT GLASS',
     description:
-      "Has your business fallen victim to a break-in, leaving you in need of urgent window and storefront glass replacement? Perhaps your windows have worn over time and require a fresh installation. Count on us for swift solutions and seamless replacements to secure your business.",
-    image: storeFront,
+      'Has your business fallen victim to a break-in, leaving you in need of urgent window and storefront glass replacement? Perhaps your windows have worn over time and require a fresh installation. Count on us for swift solutions and seamless replacements to secure your business.',
+    image: storeFront
   },
   {
-    title: "GLASS MIRRORS",
+    title: 'GLASS MIRRORS',
     description:
-      "From bathroom mirrors to full-body and office mirrors, we specialize in expert installations and meticulous repairs. Super Mario Glass Inc. is your go-to partner for all your glass mirror needs in your business. Contact us today for exceptional service and flawless mirrors.",
-    image: commercialMirror,
+      'From bathroom mirrors to full-body and office mirrors, we specialize in expert installations and meticulous repairs. Super Mario Glass Inc. is your go-to partner for all your glass mirror needs in your business. Contact us today for exceptional service and flawless mirrors.',
+    image: commercialMirror
   },
   {
-    title: "COMMERCIAL DOORS",
+    title: 'COMMERCIAL DOORS',
     description:
-      "Our skilled technicians are dedicated to providing top-notch repair and installation services for your commercial doors. Whether you need custom doors or essential trimmings to ensure smooth functionality, we have you covered. Trust us for tailored solutions that enhance your business space.",
-    image: commercialDoor,
+      'Our skilled technicians are dedicated to providing top-notch repair and installation services for your commercial doors. Whether you need custom doors or essential trimmings to ensure smooth functionality, we have you covered. Trust us for tailored solutions that enhance your business space.',
+    image: commercialDoor
   },
   {
-    title: "24/7 EMERGENCY BOARD-UP",
+    title: '24/7 EMERGENCY BOARD-UP',
     description:
-      "In the unfortunate event of storefront window damage or break-ins, our 24/7 emergency board-up glass service is here to secure your premises. We promptly board up the window opening, take precise measurements, and initiate the replacement glass process. ",
-    image: boardedCommercial,
-  },
-];
+      'In the unfortunate event of storefront window damage or break-ins, our 24/7 emergency board-up glass service is here to secure your premises. We promptly board up the window opening, take precise measurements, and initiate the replacement glass process. ',
+    image: boardedCommercial
+  }
+]
 export default function CommercialGlass() {
   return (
     <section className="container mx-auto px-4 py-8 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
@@ -90,5 +72,5 @@ export default function CommercialGlass() {
         </div>
       ))}
     </section>
-  );
+  )
 }

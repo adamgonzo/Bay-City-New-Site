@@ -1,76 +1,54 @@
-"use client";
-import React from "react";
+'use client'
+import React from 'react'
 import {
   showerGlass,
   mirrorGlass,
   glassTable,
   glassDoor,
   cabinetGlass,
-  brokenGlass,
-} from "../../images/ResidentialPageImages";
-import Image from "next/image";
-import "./index.css";
-
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: {
-    absolute: "Commercial Glass Services | Bay City General Glass",
-  },
-  metadataBase: new URL("https://www.baycitygeneralglass.net"),
-  description:
-    "Bay City General Glass specializes in commercial glass installations, including storefront glass, glass mirrors, commercial doors, and 24/7 emergency board-up services. Contact us for expert glass solutions for your business.",
-  openGraph: {
-    title: "Commercial Glass Services | Bay City General Glass",
-    description:
-      "Bay City General Glass specializes in commercial glass installations, including storefront glass, glass mirrors, commercial doors, and 24/7 emergency board-up services. Contact us for expert glass solutions for your business.",
-    url: "https://www.baycitygeneralglass.net/residential",
-    siteName: "Bay City General Glass",
-    locale: "en-US",
-    type: "website",
-  },
-  keywords:
-    "commercial glass services, storefront glass, glass mirrors, commercial doors, emergency board-up services, expert glass solutions, Bay City General Glass",
-};
+  brokenGlass
+} from '../../images/ResidentialPageImages'
+import Image from 'next/image'
+import './index.css'
 
 const services = [
   {
-    title: "SHOWER DOORS",
+    title: 'SHOWER DOORS',
     description:
-      "Upgrade your bathroom with our expert shower door installations and repairs. Whether you need a new glass door or fixes for leaks, count on us for top-notch service.",
-    image: showerGlass,
+      'Upgrade your bathroom with our expert shower door installations and repairs. Whether you need a new glass door or fixes for leaks, count on us for top-notch service.',
+    image: showerGlass
   },
   {
-    title: "GLASS MIRRORS",
+    title: 'GLASS MIRRORS',
     description:
-      "Enhance your home decor with custom mirrors tailored to your style. We offer bespoke mirror designs, allowing you to choose the size and shape that perfectly fits your space.",
-    image: mirrorGlass,
+      'Enhance your home decor with custom mirrors tailored to your style. We offer bespoke mirror designs, allowing you to choose the size and shape that perfectly fits your space.',
+    image: mirrorGlass
   },
   {
-    title: "GLASS REPLACEMENT",
+    title: 'GLASS REPLACEMENT',
     description:
       "Broken glass? We've got you covered. From windows to mirrors, sliding glass doors to cabinet glass, we specialize in seamless replacements to restore your home's beauty.",
-    image: brokenGlass,
+    image: brokenGlass
   },
   {
-    title: "DOOR GLASS",
+    title: 'DOOR GLASS',
     description:
-      "Create a stunning entrance with our custom door glass solutions. Impress your guests with unique designs that perfectly fit your door frame, adding elegance to your home.",
-    image: glassDoor,
+      'Create a stunning entrance with our custom door glass solutions. Impress your guests with unique designs that perfectly fit your door frame, adding elegance to your home.',
+    image: glassDoor
   },
   {
-    title: "GLASS TABLETOPS",
+    title: 'GLASS TABLETOPS',
     description:
-      "Make a style statement with durable glass tabletops. Our high-quality glass adds sophistication to your furniture. Easily replaceable if needed, ensuring your investment lasts.",
-    image: glassTable,
+      'Make a style statement with durable glass tabletops. Our high-quality glass adds sophistication to your furniture. Easily replaceable if needed, ensuring your investment lasts.',
+    image: glassTable
   },
   {
-    title: "CABINET GLASS",
+    title: 'CABINET GLASS',
     description:
-      "Elevate your cabinets with our premium glass options. Whether replacing broken glass or upgrading for aesthetics, choose from clear, frosted, or textured glass tailored to your taste.",
-    image: cabinetGlass,
-  },
-];
+      'Elevate your cabinets with our premium glass options. Whether replacing broken glass or upgrading for aesthetics, choose from clear, frosted, or textured glass tailored to your taste.',
+    image: cabinetGlass
+  }
+]
 
 export default function ResidentialGlass() {
   return (
@@ -108,5 +86,5 @@ export default function ResidentialGlass() {
         ))}
       </div>
     </section>
-  );
+  )
 }
