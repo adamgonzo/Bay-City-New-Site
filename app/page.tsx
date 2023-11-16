@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.baycitygeneralglass.net'),
   title: {
     absolute:
-      'Bay City General Glass | Expert Residential and Commercial Glass Installations'
+      'Bay City General Glass | Residential and Commercial Glass Installations'
   },
   description:
     'Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!',
