@@ -1,9 +1,7 @@
 'use client'
-import React, { useState } from 'react'
 import Image from 'next/image'
+import React, { useState } from 'react'
 import {
-  stairRailing1,
-  stairRailing2,
   shower1,
   shower2,
   shower3,
@@ -11,6 +9,8 @@ import {
   shower5,
   shower6,
   shower7,
+  stairRailing1,
+  stairRailing2,
   storefront1,
   storefront2,
   storefront3,
@@ -142,6 +142,7 @@ export default function Gallery() {
                 className="h-fit w-full object-contain mb-4 rounded-lg"
                 src={photo.img}
                 alt={`Gallery Image ${index}`}
+                style={{ height: 'auto', width: 'auto' }}
               />
               <div className="mb-auto mt-auto">
                 <h2 className="text-xl font-semibold mt-auto">{photo.title}</h2>
