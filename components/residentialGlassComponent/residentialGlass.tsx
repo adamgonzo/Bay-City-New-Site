@@ -1,14 +1,17 @@
 'use client'
+import Image from 'next/image'
 import React from 'react'
 import {
-  showerGlass,
-  mirrorGlass,
-  glassTable,
-  glassDoor,
+  balconyGlass,
+  brokenGlass,
   cabinetGlass,
-  brokenGlass
+  glassDoor,
+  glassTable,
+  mirrorGlass,
+  showerGlass,
+  stairGlass,
+  insulatedGlass
 } from '../../images/ResidentialPageImages'
-import Image from 'next/image'
 import './index.css'
 
 const services = [
@@ -47,6 +50,24 @@ const services = [
     description:
       'Elevate your cabinets with our premium glass options. Whether replacing broken glass or upgrading for aesthetics, choose from clear, frosted, or textured glass tailored to your taste.',
     image: cabinetGlass
+  },
+  {
+    title: 'Stair Glass Railing',
+    description:
+      'Enhance your staircase with a stunning glass railing, adding a touch of sophistication that elevates the overall look of your home and makes it stand out in any space.',
+    image: stairGlass
+  },
+  {
+    title: 'Glass Railing',
+    description:
+      'Create the ultimate interior or exterior look for your house, balcony, or outdoor space, achieving the aesthetic of a modern home with sleek clear glass for a natural and contemporary vibe.',
+    image: balconyGlass
+  },
+  {
+    title: 'Insulated Glass',
+    description:
+      'Opt for insulated glass to enjoy energy-efficient living, as it effectively regulates temperature and minimizes heat transfer, providing a comfortable and cost-effective solution for your home or office.',
+    image: insulatedGlass
   }
 ]
 

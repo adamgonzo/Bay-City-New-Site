@@ -1,13 +1,12 @@
 'use client'
-import React from 'react'
 import Image from 'next/image'
-import './index.css'
+import React from 'react'
 import {
-  commercialMirror,
   commercialDoor,
-  boardedCommercial,
+  commercialMirror,
   storeFront
 } from '../../images/CommercialPageImages/index'
+import './index.css'
 
 const services = [
   {
@@ -27,12 +26,6 @@ const services = [
     description:
       'Our skilled technicians are dedicated to providing top-notch repair and installation services for your commercial doors. Whether you need custom doors or essential trimmings to ensure smooth functionality, we have you covered. Trust us for tailored solutions that enhance your business space.',
     image: commercialDoor
-  },
-  {
-    title: '24/7 EMERGENCY BOARD-UP',
-    description:
-      'In the unfortunate event of storefront window damage or break-ins, our 24/7 emergency board-up glass service is here to secure your premises. We promptly board up the window opening, take precise measurements, and initiate the replacement glass process. ',
-    image: boardedCommercial
   }
 ]
 export default function CommercialGlass() {
