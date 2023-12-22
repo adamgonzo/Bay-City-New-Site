@@ -22,7 +22,7 @@ const services = [
     image: commercialMirror
   },
   {
-    title: 'COMMERCIAL DOORS',
+    title: 'COMMERCIAL DOORS AND STOREFRONTS',
     description:
       'Our skilled technicians are dedicated to providing top-notch repair and installation services for your commercial doors. Whether you need custom doors or essential trimmings to ensure smooth functionality, we have you covered. Trust us for tailored solutions that enhance your business space.',
     image: commercialDoor
