@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Commercial Glass Services | Bay City General Glass'
   },
-  metadataBase: new URL('https://www.baycitygeneralglass.net'),
+  metadataBase: new URL('https://www.baycitygeneralglass.com'),
   description:
     'Bay City General Glass specializes in commercial glass installations, including storefront glass, glass mirrors, commercial doors, and 24/7 emergency board-up services. Contact us for expert glass solutions for your business.',
   openGraph: {
     title: 'Commercial Glass Services | Bay City General Glass',
     description:
       'Bay City General Glass specializes in commercial glass installations, including storefront glass, glass mirrors, commercial doors, and 24/7 emergency board-up services. Contact us for expert glass solutions for your business.',
-    url: 'https://www.baycitygeneralglass.net/residential',
+    url: 'https://www.baycitygeneralglass.com/residential',
     siteName: 'Bay City General Glass',
     locale: 'en-US',
     type: 'website'

@@ -14,7 +14,7 @@ import Link from 'next/link'
 import YelpInformation from '@/components/yelpComponent'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.baycitygeneralglass.net'),
+  metadataBase: new URL('https://www.baycitygeneralglass.com'),
   title: {
     absolute:
       'Bay City General Glass | Residential and Commercial Glass Installations'
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
       'Bay City General Glass | Expert Residential and Commercial Glass Installations',
     description:
       'Bay City General Glass specializes in expert glass installations for residential and commercial spaces. Our services include mirrors, showers, insulated glass, custom glass railings, entry doors, and more. Contact us for a free estimate today!',
-    url: 'https://www.baycitygeneralglass.net',
+    url: 'https://www.baycitygeneralglass.com',
     siteName: 'Bay City General Glass',
     locale: 'en-US',
     type: 'website',
     images: [
       {
-        url: 'https://www.baycitygeneralglass.net/images/homepage-banner.jpg',
+        url: 'https://www.baycitygeneralglass.com/images/homepage-banner.jpg',
         alt: 'Bay City General Glass'
       }
     ]

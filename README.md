@@ -30,4 +30,4 @@ Feel free to explore our codebase and contribute to making our website even bett
 
 For any questions or collaborations, please don't hesitate to contact us thank you.
 
-[Contact Us](https://www.baycitygeneralglass.net/contact)
+[Contact Us](https://www.baycitygeneralglass.com/contact)

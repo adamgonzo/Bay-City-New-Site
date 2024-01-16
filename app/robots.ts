@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: '*'
       }
     ],
-    sitemap: 'https://baycitygeneralglass.net/sitemap.xml',
-    host: 'https://baycitygeneralglass.net'
+    sitemap: 'https://baycitygeneralglass.com/sitemap.xml',
+    host: 'https://baycitygeneralglass.com'
   }
 }

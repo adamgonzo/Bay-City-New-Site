@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Contact Me | Bay City General Glass'
   },
-  metadataBase: new URL('https://www.baycitygeneralglass.net'),
+  metadataBase: new URL('https://www.baycitygeneralglass.com'),
   description: 'Contact Me Form For Glass Installations',
   openGraph: {
     title: 'Contact Me | Bay City General Glass',
     description: 'Contact Form To Contact Me For Glass Installations',
-    url: 'https://www.baycitygeneralglass.net/contact',
+    url: 'https://www.baycitygeneralglass.com/contact',
     siteName: 'Bay City General Glass',
     locale: 'en-US',
     type: 'website'
